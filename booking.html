@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Бигвол — запись на пробное</title>
+<style>
+x-dc{display:block;visibility:hidden}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#E9ECF1}
+@media (max-width:480px){body{display:block;background:#fff} x-dc>div{width:100vw!important;height:100dvh!important}}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#121212}a:hover{color:#2F7FD0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #FFFFFF; font-family: Manrope, 'Helvetica Neue', Arial, sans-serif; color: #121212">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; box-sizing: border-box">
+
+<header style="position: sticky; top: 0; z-index: 5; height: 56px; padding: 0 8px; display: flex; align-items: center; gap: 4px; background: #FFFFFF; border-bottom: 1px solid #E6E8EC">
+<a href="index.html" aria-label="Назад на главную" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+</a>
+<div style="font-size: 16px; font-weight: 700">Запись на занятие</div>
+</header>
+
+<sc-if value="{{form}}" hint-placeholder-val="{{ true }}">
+<div style="padding: 20px 16px 32px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 15px; font-weight: 800">1. Формат</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{formats}}" as="f" hint-placeholder-count="4">
+<button onClick="{{f.pick}}" style="{{f.style}}">
+<span style="font-size: 15px; font-weight: 800">{{f.name}}</span>
+<span style="font-size: 12px; opacity: 0.8; margin-top: 2px">{{f.price}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+
+<div style="background: #ECF57A; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 18px; font-weight: 800">{{fmt.title}}</div>
+<div style="font-size: 14px; line-height: 1.45; color: #2E2E2E">{{fmt.desc}}</div>
+<div style="font-size: 15px; font-weight: 800; margin-top: 4px">{{fmt.summary}}</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 15px; font-weight: 800">2. Выберите зал</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{halls}}" as="h" hint-placeholder-count="3">
+<button onClick="{{h.pick}}" style="{{h.style}}">
+<span style="font-size: 15px; font-weight: 800">{{h.name}}</span>
+<span style="font-size: 12px; opacity: 0.8; margin-top: 2px">{{h.place}}</span>
+</button>
+</sc-for>
+</div>
+<div style="font-size: 12px; color: #4D4D4D">Занятия с тренером проходят в Ривьере, Гавани и на Динамо</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 800">3. Оставьте контакты</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: #2E2E2E">Имя
+<input type="text" placeholder="Как к вам обращаться" style="height: 52px; border: 1.5px solid #CDD2D9; border-radius: 12px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #121212; box-sizing: border-box">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: #2E2E2E">Телефон
+<input type="tel" placeholder="+7 ___ ___-__-__" style="height: 52px; border: 1.5px solid #CDD2D9; border-radius: 12px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #121212; box-sizing: border-box">
+</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.4; color: #2E2E2E">
+<input type="checkbox" style="width: 20px; height: 20px; margin: 0; flex-shrink: 0; accent-color: #121212">
+<span>Согласен на <a href="#" style="color: #1F5FA3">обработку персональных данных</a></span>
+</label>
+</div>
+
+<button onClick="{{submit}}" style="height: 56px; border: 0; border-radius: 14px; background: #121212; color: #FFFFFF; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">Записаться в {{hallName}}</button>
+<div style="font-size: 13px; color: #4D4D4D; text-align: center; margin-top: -10px">Перезвоним и подберём удобное время</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #E6E8EC; padding-top: 18px">
+<div style="font-size: 13px; color: #4D4D4D; text-align: center">Удобнее иначе?</div>
+<div style="display: flex; gap: 8px">
+<a href="https://t.me/BW_sport_bot" style="flex: 1; height: 48px; border-radius: 12px; border: 1.5px solid #121212; text-decoration: none; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center">Telegram-бот</a>
+<a href="tel:+74996537828" style="flex: 1; height: 48px; border-radius: 12px; border: 1.5px solid #121212; text-decoration: none; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center">Позвонить</a>
+</div>
+<div style="font-size: 13px; color: #4D4D4D; text-align: center; line-height: 1.4; margin-top: 6px">Лазаете самостоятельно? Записываться не нужно: <a href="https://bigwallsport.ru/prices" style="color: #1F5FA3; font-weight: 700">купите посещение от 700 ₽</a></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 80px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<div style="width: 72px; height: 72px; border-radius: 36px; background: #ECF57A; display: flex; align-items: center; justify-content: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+</div>
+<h1 style="margin: 0; font-size: 26px; font-weight: 800">Заявка отправлена</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #2E2E2E">Перезвоним, чтобы подобрать время в зале {{hallName}}. Возьмите удобную спортивную одежду и приходите за 15 минут до начала: администратор поможет с оформлением.</p>
+<a href="https://mobifitness.ru/go/1a78-d58-8bc1fdb6d" style="margin-top: 8px; width: 100%; height: 52px; border-radius: 14px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center">Скачать приложение</a>
+<a href="index.html" style="width: 100%; height: 48px; border-radius: 14px; border: 1.5px solid #121212; text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">На главную</a>
+</div>
+</sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { hall: 'riviera', sent: false, fmt: 'trial' };
+  }
+  renderVals() {
+    var self = this;
+    var data = [
+      { id: 'riviera', name: 'Ривьера', place: 'Автозаводская' },
+      { id: 'dinamo', name: 'Динамо', place: 'Арена Плаза · с 7:00' },
+      { id: 'gavan', name: 'Гавань', place: 'Водный стадион' }
+    ];
+    var base = 'min-height: 64px; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; font-family: inherit; cursor: pointer; ';
+    var halls = data.map(function (h) {
+      var sel = self.state.hall === h.id;
+      return Object.assign({}, h, {
+        style: base + (sel ? 'background: #121212; color: #FFFFFF; border: 1.5px solid #121212;' : 'background: #FFFFFF; color: #121212; border: 1.5px solid #CDD2D9;'),
+        pick: function () { self.setState({ hall: h.id }); }
+      });
+    });
+    var cur = data.filter(function (h) { return h.id === self.state.hall; })[0];
+    var fdata = [
+      { id: 'trial', name: 'Пробное', price: 'Бесплатно', title: 'Бесплатное пробное занятие', desc: 'Для новых гостей 18+, которые были у нас не больше двух раз. Группа с тренером, снаряжение выдадим.', summary: '0 ₽ · 75 минут' },
+      { id: 'group', name: 'В группе', price: '2300 ₽', title: 'Занятие в группе', desc: 'Группа до 10 человек, 18+. Прокат снаряжения оплачивается отдельно.', summary: '2300 ₽ · 2 часа' },
+      { id: 'course', name: 'Курс', price: '15 000 ₽', title: 'Курс «Уверенный старт»', desc: 'Техника, баланс и правильная работа ног с инструктором.', summary: '15 000 ₽ · 4 тренировки' },
+      { id: 'personal', name: 'Персонально', price: '4200 ₽', title: 'Персональное занятие', desc: 'Индивидуально с тренером, прокат снаряжения входит. Вдвоём — 6800 ₽.', summary: '4200 ₽ · 1 час' }
+    ];
+    var formats = fdata.map(function (f) {
+      var sel = self.state.fmt === f.id;
+      return Object.assign({}, f, {
+        style: base + (sel ? 'background: #121212; color: #FFFFFF; border: 1.5px solid #121212;' : 'background: #FFFFFF; color: #121212; border: 1.5px solid #CDD2D9;'),
+        pick: function () { self.setState({ fmt: f.id }); }
+      });
+    });
+    var fmt = fdata.filter(function (f) { return f.id === self.state.fmt; })[0];
+    return {
+      formats: formats,
+      fmt: fmt,
+      halls: halls,
+      hallName: cur.name,
+      form: !self.state.sent,
+      sent: self.state.sent,
+      submit: function () { self.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

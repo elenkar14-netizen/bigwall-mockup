@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Бигвол — покупка</title>
+<style>
+x-dc{display:block;visibility:hidden}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#E9ECF1}
+@media (max-width:480px){body{display:block;background:#fff} x-dc>div{width:100vw!important;height:100dvh!important}}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#121212}a:hover{color:#2F7FD0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #FFFFFF; font-family: Manrope, 'Helvetica Neue', Arial, sans-serif; color: #121212">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; box-sizing: border-box">
+
+<header style="position: sticky; top: 0; z-index: 5; height: 56px; padding: 0 8px; display: flex; align-items: center; gap: 4px; background: #FFFFFF; border-bottom: 1px solid #E6E8EC">
+<a href="index.html" aria-label="Назад на главную" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+</a>
+<div style="font-size: 16px; font-weight: 700">Покупка</div>
+</header>
+
+<sc-if value="{{form}}" hint-placeholder-val="{{ true }}">
+<div style="padding: 20px 16px 32px; display: flex; flex-direction: column; gap: 22px">
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 15px; font-weight: 800">Что покупаете</div>
+<div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="6">
+<button onClick="{{p.pick}}" style="{{p.style}}">
+<span style="font-size: 14px; font-weight: 800; white-space: nowrap">{{p.short}}</span>
+<span style="font-size: 12px; opacity: 0.8; margin-top: 2px; white-space: nowrap">{{p.priceLabel}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+
+<div style="border: 1.5px solid #121212; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline">
+<div style="font-size: 19px; font-weight: 800; line-height: 1.2">{{prod.title}}</div>
+<div style="font-size: 19px; font-weight: 800; white-space: nowrap">{{prod.priceLabel}}</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{prod.tags}}" as="t" hint-placeholder-count="2">
+<span style="font-size: 12px; font-weight: 700; background: #DCE7FB; color: #1E3A5F; border-radius: 999px; padding: 5px 10px">{{t}}</span>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{prod.facts}}" as="f" hint-placeholder-count="3">
+<div style="display: flex; gap: 8px; align-items: flex-start; font-size: 14px; line-height: 1.4">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+<span>{{f}}</span>
+</div>
+</sc-for>
+<div style="display: flex; gap: 8px; align-items: flex-start; font-size: 14px; line-height: 1.4; color: #4D4D4D">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D4D4D" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16v.5"></path></svg>
+<span>Прокат снаряжения оплачивается отдельно: туфли 400 ₽, магнезия 100 ₽</span>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 800">Контакты</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: #2E2E2E">Имя и фамилия
+<input type="text" placeholder="Как в документе" style="height: 52px; border: 1.5px solid #CDD2D9; border-radius: 12px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #121212; box-sizing: border-box">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: #2E2E2E">Телефон
+<input type="tel" placeholder="+7 ___ ___-__-__" style="height: 52px; border: 1.5px solid #CDD2D9; border-radius: 12px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #121212; box-sizing: border-box">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: #2E2E2E">Email для чека
+<input type="email" placeholder="name@mail.ru" style="height: 52px; border: 1.5px solid #CDD2D9; border-radius: 12px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #121212; box-sizing: border-box">
+</label>
+<div style="font-size: 12px; color: #4D4D4D; line-height: 1.4">По этому телефону войдёте в приложение: абонемент уже будет там</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<button onClick="{{togglePromo}}" style="align-self: flex-start; min-height: 44px; padding: 0; border: 0; background: none; font-family: inherit; font-size: 14px; font-weight: 700; color: #1F5FA3; cursor: pointer">{{promoLabel}}</button>
+<sc-if value="{{promoOpen}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; gap: 8px">
+<input type="text" placeholder="Промокод или номер сертификата" style="flex: 1; min-width: 0; height: 48px; border: 1.5px solid #CDD2D9; border-radius: 12px; padding: 0 14px; font-family: inherit; font-size: 15px; color: #121212; box-sizing: border-box">
+<button style="height: 48px; padding: 0 16px; border: 1.5px solid #121212; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer">Применить</button>
+</div>
+</sc-if>
+</div>
+
+<div style="background: #F4F6FA; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+<div style="display: flex; justify-content: space-between"><span>{{prod.short}}</span><span>{{prod.priceLabel}}</span></div>
+<div style="display: flex; justify-content: space-between; color: #1B7A3A; font-weight: 700"><span>Бонус за первую покупку</span><span>+500 баллов</span></div>
+<div style="display: flex; justify-content: space-between; border-top: 1px solid #DDE1E7; padding-top: 10px; font-size: 18px; font-weight: 800"><span>Итого</span><span>{{totalLabel}}</span></div>
+</div>
+
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: #2E2E2E">
+<input type="checkbox" style="width: 20px; height: 20px; margin: 0; flex-shrink: 0; accent-color: #121212">
+<span>Принимаю <a href="#" style="color: #1F5FA3">правила посещения</a>, <a href="#" style="color: #1F5FA3">оферту</a> и согласен на <a href="#" style="color: #1F5FA3">обработку данных</a></span>
+</label>
+
+<button onClick="{{pay}}" style="height: 56px; border: 0; border-radius: 14px; background: #121212; color: #FFFFFF; font-family: inherit; font-size: 17px; font-weight: 800; cursor: pointer">Оплатить {{totalLabel}}</button>
+
+<div style="font-size: 13px; color: #4D4D4D; text-align: center; line-height: 1.5">Есть вопросы? <a href="https://t.me/BW_sport_bot" style="color: #1F5FA3; font-weight: 700">Telegram-бот</a> или <a href="tel:+74996537828" style="color: #1F5FA3; font-weight: 700">+7 499 653-78-28</a></div>
+</div>
+</sc-if>
+
+<sc-if value="{{paid}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 80px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<div style="width: 72px; height: 72px; border-radius: 36px; background: #ECF57A; display: flex; align-items: center; justify-content: center">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+</div>
+<h1 style="margin: 0; font-size: 26px; font-weight: 800">Оплачено</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #2E2E2E">{{prod.title}} уже в приложении. Войдите по номеру телефона и проходите в зал по QR-коду.</p>
+<a href="https://mobifitness.ru/go/1a78-d58-8bc1fdb6d" style="margin-top: 8px; width: 100%; height: 52px; border-radius: 14px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center">Открыть приложение</a>
+<a href="index.html" style="width: 100%; height: 48px; border-radius: 14px; border: 1.5px solid #121212; text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">На главную</a>
+</div>
+</sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { prod: 'prime', promo: false, paid: false };
+  }
+  renderVals() {
+    var self = this;
+    var all = 'Все залы, включая Лужники';
+    var data = [
+      { id: 'lite', short: 'Лайт', price: 700, title: 'Разовое посещение «Лайт»', tags: ['1 день'], facts: ['Будни до 16:30', 'Самостоятельное лазание без тренера'] },
+      { id: 'prime', short: 'Прайм', price: 1250, title: 'Разовое посещение «Прайм»', tags: ['1 день'], facts: ['Будни с 16:30 до 23:30, выходные и праздники весь день', 'Самостоятельное лазание без тренера'] },
+      { id: 'p4', short: '4 посещения', price: 4600, title: 'Абонемент на 4 посещения', tags: ['45 дней', all], facts: ['Одно посещение — 1150 ₽'] },
+      { id: 'p8', short: '8 посещений', price: 8000, title: 'Абонемент на 8 посещений', tags: ['60 дней', all], facts: ['Срок считается с первого посещения', 'Можно прийти с друзьями: с каждого спишется одно посещение'] },
+      { id: 'p15', short: '15 посещений', price: 13500, title: 'Абонемент на 15 посещений', tags: ['365 дней', all], facts: ['Можно купить заранее и активировать в любое время', 'Можно прийти с друзьями: с каждого спишется одно посещение'] },
+      { id: 'unl', short: 'Безлимит', price: 5600, title: 'Безлимит на 1 месяц', tags: ['1 месяц', all], facts: ['Лазайте сколько угодно', 'Можно купить заранее и активировать в любое время'] }
+    ];
+    function rub(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; }
+    var base = 'flex: 0 0 auto; min-height: 56px; border-radius: 14px; padding: 8px 14px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-family: inherit; cursor: pointer; ';
+    var products = data.map(function (p) {
+      var sel = self.state.prod === p.id;
+      return Object.assign({}, p, {
+        priceLabel: rub(p.price),
+        style: base + (sel ? 'background: #121212; color: #FFFFFF; border: 1.5px solid #121212;' : 'background: #FFFFFF; color: #121212; border: 1.5px solid #CDD2D9;'),
+        pick: function () { self.setState({ prod: p.id }); }
+      });
+    });
+    var cur = data.filter(function (p) { return p.id === self.state.prod; })[0];
+    var prod = Object.assign({}, cur, { priceLabel: rub(cur.price) });
+    var total = cur.price;
+    return {
+      products: products,
+      prod: prod,
+      totalLabel: rub(total),
+      promoOpen: self.state.promo,
+      promoLabel: self.state.promo ? 'Скрыть промокод' : 'Есть промокод или сертификат?',
+      togglePromo: function () { self.setState({ promo: !self.state.promo }); },
+      form: !self.state.paid,
+      paid: self.state.paid,
+      pay: function () { self.setState({ paid: true }); }
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

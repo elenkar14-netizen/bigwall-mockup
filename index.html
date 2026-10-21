@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Бигвол — главная</title>
+<style>
+x-dc{display:block;visibility:hidden}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#E9ECF1}
+@media (max-width:480px){body{display:block;background:#fff} x-dc>div{width:100vw!important;height:100dvh!important}}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#121212}a:hover{color:#2F7FD0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #FFFFFF; font-family: Manrope, 'Helvetica Neue', Arial, sans-serif; color: #121212">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow-y: auto; padding-bottom: 92px; box-sizing: border-box">
+
+<header style="position: sticky; top: 0; z-index: 5; height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border-bottom: 1px solid #E6E8EC">
+<a href="#top" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #121212">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#2F7FD0"></circle><path d="M3 22 L11 10 L15 15 L18 11 L25 22 Z" fill="#121212"></path></svg>
+<span style="font-weight: 800; font-size: 18px; letter-spacing: 0.02em">БИГВОЛ</span>
+</a>
+<div style="display: flex; gap: 8px">
+<a href="tel:+74996537828" aria-label="Позвонить" style="width: 44px; height: 44px; border-radius: 12px; background: #F2F4F7; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2z"></path></svg>
+</a>
+<button aria-label="Меню" style="width: 44px; height: 44px; border-radius: 12px; border: 0; background: #F2F4F7; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</div>
+</header>
+
+<section id="top" style="position: relative; background: #1E252E; color: #FFFFFF; padding: 72px 20px 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="position: absolute; top: 14px; right: 14px; font-size: 11px; color: #C9D1DB; border: 1px dashed #5B6573; border-radius: 8px; padding: 4px 8px">[Фото: человек на стене, крупно]</div>
+<a href="https://yandex.ru/maps/org/bigvol_sport/78815612637/" style="align-self: flex-start; display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600">
+<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.1l1.4-7L2 9.3l7-.8z" fill="#ECF57A"></path></svg>
+5,0 · 159 отзывов на Яндекс Картах
+</a>
+<div style="display: flex; gap: 4px; background: rgba(255,255,255,0.12); border-radius: 12px; padding: 4px">
+<button onClick="{{pickNew}}" style="{{tabNew}}">Я впервые</button>
+<button onClick="{{pickPro}}" style="{{tabPro}}">Уже лазаю</button>
+</div>
+<h1 style="margin: 0; font-size: 36px; line-height: 1.08; font-weight: 800">Скалолазание для взрослых</h1>
+<sc-if value="{{isNew}}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #DCE2EA">Первое занятие бесплатно: 75 минут с тренером, снаряжение выдадим. Опыт не нужен.</p>
+<a href="booking.html" style="margin-top: 6px; height: 56px; border-radius: 14px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 800; font-size: 17px; display: flex; align-items: center; justify-content: center">Записаться бесплатно</a>
+<a href="#trial" style="height: 48px; border-radius: 14px; border: 1.5px solid rgba(255,255,255,0.5); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center">Как проходит первое занятие</a>
+</sc-if>
+<sc-if value="{{isPro}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #DCE2EA">Свежие трассы каждую неделю, Kilter и Tension board. Один абонемент на все залы.</p>
+<a href="checkout.html" style="margin-top: 6px; height: 56px; border-radius: 14px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 800; font-size: 17px; display: flex; align-items: center; justify-content: center">Купить посещение · от 700 ₽</a>
+<a href="#climb" style="height: 48px; border-radius: 14px; border: 1.5px solid rgba(255,255,255,0.5); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center">Абонементы и занятия с тренером</a>
+</sc-if>
+</section>
+
+<section id="trial" style="padding: 28px 16px 8px">
+<div style="background: #ECF57A; border-radius: 20px; padding: 22px 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Лучший способ попробовать</div>
+<h2 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">Бесплатное пробное занятие</h2>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #2E2E2E">Для новых гостей 18+, которые были у нас не больше двух раз. Только по предварительной записи.</p>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{trialPoints}}" as="p" hint-placeholder-count="3">
+<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.4">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+<span>{{p}}</span>
+</div>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(0,0,0,0.15); padding-top: 12px">
+<span style="font-size: 22px; font-weight: 800">0 ₽</span>
+<span style="font-size: 14px; color: #2E2E2E">75 минут · снаряжение включено</span>
+</div>
+<a href="booking.html" style="height: 52px; border-radius: 14px; background: #121212; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center">Выбрать зал и записаться</a>
+</div>
+</section>
+
+<section id="climb" style="padding: 28px 16px 8px; display: flex; flex-direction: column; gap: 12px">
+<div>
+<h2 style="margin: 0; font-size: 22px; font-weight: 800">Уже лазаете?</h2>
+<p style="margin: 6px 0 0; font-size: 14px; line-height: 1.45; color: #4D4D4D">Приходите самостоятельно или растите с тренером</p>
+</div>
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4D4D4D; margin-top: 4px">Самостоятельно</div>
+<sc-for list="{{passes}}" as="p" hint-placeholder-count="3">
+<div style="border: 1px solid #E6E8EC; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px">
+<div style="flex: 1; min-width: 0">
+<div style="font-size: 16px; font-weight: 800">{{p.title}}</div>
+<div style="font-size: 13px; color: #4D4D4D; line-height: 1.35; margin-top: 2px">{{p.note}}</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px">
+<div style="font-size: 17px; font-weight: 800; white-space: nowrap">{{p.price}}</div>
+<a href="checkout.html" style="min-height: 44px; padding: 0 14px; border-radius: 12px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 700; font-size: 14px; display: flex; align-items: center">Купить</a>
+</div>
+</div>
+</sc-for>
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4D4D4D; margin-top: 8px">С тренером</div>
+<sc-for list="{{coach}}" as="c" hint-placeholder-count="3">
+<div style="border: 1px solid #E6E8EC; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px">
+<div style="flex: 1; min-width: 0">
+<div style="font-size: 16px; font-weight: 800">{{c.title}}</div>
+<div style="font-size: 13px; color: #4D4D4D; line-height: 1.35; margin-top: 2px">{{c.note}}</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px">
+<div style="font-size: 17px; font-weight: 800; white-space: nowrap">{{c.price}}</div>
+<a href="booking.html" style="min-height: 44px; padding: 0 14px; border-radius: 12px; background: #121212; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 14px; display: flex; align-items: center">Записаться</a>
+</div>
+</div>
+</sc-for>
+<a href="https://bigwallsport.ru/prices" style="font-size: 14px; font-weight: 700; color: #1F5FA3; margin-top: 4px">Все цены, студенческие тарифы и прокат</a>
+</section>
+
+<section style="padding: 24px 0 8px">
+<div style="padding: 0 16px; display: flex; justify-content: space-between; align-items: flex-end">
+<div>
+<h2 style="margin: 0; font-size: 22px; font-weight: 800">Что говорят новички</h2>
+<div style="font-size: 13px; color: #4D4D4D; margin-top: 4px">5,0 · 159 отзывов · 179 оценок</div>
+</div>
+<a href="https://yandex.ru/maps/org/bigvol_sport/78815612637/" style="font-size: 14px; font-weight: 700; color: #1F5FA3">Все отзывы</a>
+</div>
+<div style="display: flex; gap: 12px; overflow-x: auto; padding: 14px 16px 6px">
+<sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+<div style="flex: 0 0 260px; border: 1px solid #E6E8EC; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box">
+<div style="color: #E0A100; font-size: 14px; letter-spacing: 2px" aria-label="5 из 5">★★★★★</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45">{{r.text}}</p>
+<div style="font-size: 13px; color: #4D4D4D; font-weight: 600">{{r.name}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="padding: 24px 16px 8px">
+<h2 style="margin: 0 0 14px; font-size: 22px; font-weight: 800">Почему Бигвол</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="grid-column: span 2; background: #DCE7FB; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 16px; font-weight: 800">Один абонемент на все залы</div>
+<div style="font-size: 14px; color: #2E3A4A; line-height: 1.4">Выбирайте зал, который удобнее по маршруту</div>
+</div>
+<sc-for list="{{benefits}}" as="b" hint-placeholder-count="4">
+<div style="background: #F4F6FA; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 15px; font-weight: 700; line-height: 1.25">{{b.title}}</div>
+<div style="font-size: 13px; color: #4D4D4D; line-height: 1.35">{{b.text}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="halls" style="padding: 28px 16px 8px">
+<h2 style="margin: 0 0 14px; font-size: 22px; font-weight: 800">Выберите зал</h2>
+<div style="display: flex; gap: 6px; background: #F2F4F7; border-radius: 14px; padding: 4px">
+<sc-for list="{{halls}}" as="h" hint-placeholder-count="4">
+<button onClick="{{h.pick}}" style="{{h.tabStyle}}">{{h.name}}</button>
+</sc-for>
+</div>
+<div style="margin-top: 12px; border: 1px solid #E6E8EC; border-radius: 20px; overflow: hidden">
+<div style="height: 150px; background: #CBD5E1; position: relative; display: flex; align-items: center; justify-content: center; color: #334155; font-size: 13px">
+[Фото зала {{hall.name}}]
+<sc-if value="{{hall.hasBadge}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; top: 12px; left: 12px; background: #121212; color: #FFFFFF; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 6px 10px">{{hall.badge}}</div>
+</sc-if>
+</div>
+<div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div>
+<div style="font-size: 20px; font-weight: 800">{{hall.name}}</div>
+<div style="font-size: 13px; color: #4D4D4D; margin-top: 2px">{{hall.place}}</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45">{{hall.text}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{hall.tags}}" as="t" hint-placeholder-count="2">
+<span style="font-size: 12px; font-weight: 700; background: #DCE7FB; color: #1E3A5F; border-radius: 999px; padding: 5px 10px">{{t}}</span>
+</sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; font-size: 13px">
+<div style="background: #F4F6FA; border-radius: 10px; padding: 10px"><div style="color: #4D4D4D">Метро</div><div style="font-weight: 700; margin-top: 2px">[метро]</div></div>
+<div style="background: #F4F6FA; border-radius: 10px; padding: 10px"><div style="color: #4D4D4D">Часы</div><div style="font-weight: 700; margin-top: 2px">{{hall.hours}}</div></div>
+</div>
+<div style="display: flex; gap: 6px; align-items: flex-start; font-size: 13px; color: #2E2E2E">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+<span>{{hall.address}}</span>
+</div>
+<div style="display: flex; gap: 8px">
+<a href="booking.html" style="flex: 1; height: 48px; border-radius: 12px; background: #121212; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">Записаться сюда</a>
+<a href="{{hall.url}}" style="height: 48px; padding: 0 16px; border-radius: 12px; border: 1.5px solid #121212; text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">О зале</a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding: 28px 16px 8px">
+<h2 style="margin: 0 0 6px; font-size: 22px; font-weight: 800">Ещё форматы</h2>
+<div style="display: flex; flex-direction: column">
+<sc-for list="{{formats}}" as="f" hint-placeholder-count="5">
+<a href="{{f.url}}" style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #E6E8EC; text-decoration: none; color: #121212">
+<div>
+<div style="font-size: 16px; font-weight: 700">{{f.title}}</div>
+<div style="font-size: 13px; color: #4D4D4D; margin-top: 2px">{{f.text}}</div>
+</div>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section style="padding: 28px 16px 8px">
+<h2 style="margin: 0 0 6px; font-size: 22px; font-weight: 800">Частые вопросы</h2>
+<sc-for list="{{faqs}}" as="q" hint-placeholder-count="4">
+<div style="border-bottom: 1px solid #E6E8EC">
+<button onClick="{{q.toggle}}" style="width: 100%; min-height: 56px; padding: 14px 0; background: none; border: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-family: inherit; font-size: 16px; font-weight: 700; color: #121212; cursor: pointer">
+<span>{{q.q}}</span>
+<sc-if value="{{q.closed}}" hint-placeholder-val="{{ true }}">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+</sc-if>
+<sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0" aria-hidden="true"><path d="M5 12h14"></path></svg>
+</sc-if>
+</button>
+<sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0 0 16px; font-size: 14px; line-height: 1.5; color: #2E2E2E">{{q.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</section>
+
+<section style="padding: 28px 16px">
+<div style="background: #F4F6FA; border-radius: 20px; padding: 18px; display: flex; gap: 14px; align-items: center">
+<div style="width: 52px; height: 52px; border-radius: 14px; background: #ECF57A; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg>
+</div>
+<div style="flex: 1">
+<div style="font-size: 15px; font-weight: 800">Приложение Бигвол</div>
+<div style="font-size: 13px; color: #4D4D4D; line-height: 1.35; margin-top: 2px">Загруженность зала онлайн, вход по QR, запись на тренировки</div>
+</div>
+<a href="https://mobifitness.ru/go/1a78-d58-8bc1fdb6d" style="font-size: 14px; font-weight: 700; color: #1F5FA3">Скачать</a>
+</div>
+</section>
+
+<footer style="background: #121212; color: #FFFFFF; padding: 28px 20px 24px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ECF57A">Залы</div>
+<sc-for list="{{halls}}" as="h" hint-placeholder-count="4">
+<div style="font-size: 14px; line-height: 1.4"><span style="font-weight: 700">{{h.name}}</span><span style="color: #B8BEC6"> — {{h.address}}</span></div>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ECF57A">Связаться</div>
+<a href="tel:+74996537828" style="color: #FFFFFF; font-weight: 700">+7 499 653-78-28</a>
+<a href="https://t.me/BW_sport_bot" style="color: #FFFFFF">Telegram-бот</a>
+<a href="mailto:info@bigwallsport.ru" style="color: #FFFFFF">info@bigwallsport.ru</a>
+</div>
+<div style="font-size: 12px; line-height: 1.5; color: #9EA5AE">© Скалодром Бигвол, 2026 · ООО «Альпекс Весна» · ИНН 5029199324 · ОГРН 1155029005845. Занятия носят физкультурно-оздоровительный характер.</div>
+</footer>
+</div>
+
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; background: #FFFFFF; border-top: 1px solid #E6E8EC; display: flex; gap: 10px; z-index: 6">
+<sc-if value="{{isNew}}" hint-placeholder-val="{{ true }}">
+<a href="booking.html" style="flex: 1; height: 52px; border-radius: 14px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center">Пробное бесплатно — записаться</a>
+</sc-if>
+<sc-if value="{{isPro}}" hint-placeholder-val="{{ false }}">
+<a href="checkout.html" style="flex: 1; height: 52px; border-radius: 14px; background: #ECF57A; color: #121212; text-decoration: none; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center">Купить посещение · от 700 ₽</a>
+</sc-if>
+<a href="https://t.me/BW_sport_bot" aria-label="Написать в Telegram" style="width: 52px; height: 52px; border-radius: 14px; background: #F2F4F7; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3.5"></path></svg>
+</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { hall: 'riviera', faq: -1, aud: 'new' };
+  }
+  renderVals() {
+    var self = this;
+    var hallsData = [
+      { id: 'riviera', name: 'Ривьера', place: 'Флагманский зал', address: 'Автозаводская ул., 18, ТРЦ «Ривьера»', text: 'Самый просторный зал: больше трасс разного уровня и зоны отдыха прямо в зале.', tags: ['Tension board', 'Боулдеринг', 'Флагман'], hours: '[часы]', badge: '', url: 'https://bigwallsport.ru/rivera' },
+      { id: 'dinamo', name: 'Динамо', place: 'ВТБ Арена, ТЦ «Арена Плаза»', address: 'Ленинградский пр-т, 36, ТЦ «Арена Плаза»', text: 'Сильное комьюнити и удобная локация. Единственный зал, который открывается в 7 утра.', tags: ['Kilter board', 'Боулдеринг', 'С 7:00'], hours: 'с 7:00 · [до]', badge: '', url: 'https://bigwallsport.ru/skalodrom-na-dinamo' },
+      { id: 'gavan', name: 'Гавань', place: 'У Водного стадиона', address: 'Кронштадтский б-р, 3А, ТЦ «Гавань»', text: 'Зал с атмосферой: сюда приходят не только тренироваться, но и провести время в комьюнити.', tags: ['Боулдеринг', 'Комьюнити'], hours: '[часы]', badge: '', url: 'https://bigwallsport.ru/vodnyi_stadion' },
+      { id: 'luzh', name: 'Лужники', place: 'Летняя площадка, май — сентябрь', address: 'ул. Лужники, 24с46', text: 'Боулдеринг и башня трудности 12 метров на открытом воздухе среди зелени.', tags: ['Башня 12 м', 'Open-air'], hours: 'май — сентябрь', badge: 'Откроется в мае', url: 'https://bigwallsport.ru/luzhniki' }
+    ];
+    var base = 'flex: 1; min-height: 40px; border: 0; border-radius: 10px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; padding: 0 4px; ';
+    var halls = hallsData.map(function (h) {
+      var sel = self.state.hall === h.id;
+      return Object.assign({}, h, {
+        tabStyle: base + (sel ? 'background: #121212; color: #FFFFFF;' : 'background: transparent; color: #2E2E2E;'),
+        pick: function () { self.setState({ hall: h.id }); }
+      });
+    });
+    var cur = hallsData.filter(function (h) { return h.id === self.state.hall; })[0];
+    var hall = Object.assign({}, cur, { hasBadge: cur.badge !== '' });
+    var faqData = [
+      { q: 'Чем боулдеринг отличается от трудности?', a: 'Боулдеринг — короткие трассы на невысокой стене без верёвки, внизу мягкие маты. Трудность — длинные трассы на высокой стене с верёвкой и страховкой.' },
+      { q: 'Как записаться на пробное занятие?', a: 'Нажмите «Записаться на пробное» и оставьте контакты, напишите в Telegram-бот или позвоните: +7 499 653-78-28.' },
+      { q: 'Сколько стоит пробное занятие?', a: 'Бесплатно для новых гостей 18+. Занятие длится 75 минут, снаряжение входит. Проводится только по предварительной записи в залах Ривьера, Гавань и Динамо.' },
+      { q: 'Что взять с собой?', a: 'Удобную спортивную одежду. Скальные туфли и всё необходимое выдадим. Приходите за 15 минут до начала: администратор поможет с оформлением.' },
+      { q: 'Что после пробного?', a: 'Можно лазать самостоятельно или продолжить с тренером: курс «Уверенный старт» — 4 тренировки за 15 000 ₽, занятие в группе до 10 человек — 2300 ₽, персональное — 4200 ₽.' }
+    ];
+    var faqs = faqData.map(function (f, i) {
+      var open = self.state.faq === i;
+      return Object.assign({}, f, {
+        open: open,
+        closed: !open,
+        toggle: function () { self.setState({ faq: open ? -1 : i }); }
+      });
+    });
+    var isNew = self.state.aud === 'new';
+    var tb = 'flex: 1; min-height: 40px; border: 0; border-radius: 9px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; ';
+    var on = 'background: #FFFFFF; color: #121212;';
+    var off = 'background: transparent; color: #FFFFFF;';
+    return {
+      isNew: isNew,
+      isPro: !isNew,
+      tabNew: tb + (isNew ? on : off),
+      tabPro: tb + (isNew ? off : on),
+      pickNew: function () { self.setState({ aud: 'new' }); },
+      pickPro: function () { self.setState({ aud: 'pro' }); },
+      passes: [
+        { title: 'Лайт', note: 'Разовое · будни до 16:30', price: '700 ₽' },
+        { title: 'Прайм', note: 'Разовое · будни с 16:30, выходные весь день', price: '1250 ₽' },
+        { title: 'Безлимит на месяц', note: 'Можно купить заранее и активировать позже', price: '5600 ₽' }
+      ],
+      coach: [
+        { title: 'Занятие в группе', note: 'До 10 человек · 2 часа · прокат отдельно', price: '2300 ₽' },
+        { title: 'Курс «Уверенный старт»', note: '4 тренировки: техника, баланс, работа ног', price: '15 000 ₽' },
+        { title: 'Персональное', note: '1 час с тренером · прокат входит', price: '4200 ₽' }
+      ],
+      halls: halls,
+      hall: hall,
+      faqs: faqs,
+      trialPoints: [
+        'Занятие в группе с теми, кто тоже пробует впервые',
+        'Тренер расскажет о безопасности и проведёт разминку',
+        'Скальные туфли и всё нужное выдадим, покупать ничего не надо',
+        'Первые пролазы и рекомендации, куда двигаться дальше'
+      ],
+      reviews: [
+        { text: 'Пришёл на пробное занятие и ни разу не пожалел. Трассы постоянно обновляются.', name: 'Антон С.' },
+        { text: 'Удобное расположение, отзывчивые инструкторы, интересные и разнообразные трассы.', name: 'Валерия С.' },
+        { text: 'Был на пробном групповом: подбадривали и помогали, время пролетело незаметно.', name: 'Вадим Р.' }
+      ],
+      benefits: [
+        { title: 'Можно без опыта', text: 'Расскажем, как всё устроено' },
+        { title: 'Тренеры рядом', text: 'Пробное, курс или персонально' },
+        { title: 'Новые трассы', text: 'Регулярно обновляем задачки' },
+        { title: 'Самостоятельно', text: 'Если уже уверенно лазаете' }
+      ],
+      formats: [
+        { title: 'Школа скалолазания', text: 'Курс с тренером по расписанию', url: 'https://bigwallsport.ru/shkola-skalolazaniya-dlya-vzroslyh' },
+        { title: 'Цены и абонементы', text: 'Разовые посещения и абонементы', url: 'https://bigwallsport.ru/prices' },
+        { title: 'Детская школа 10+', text: 'Занятия для детей с тренером', url: 'https://bigwallsport.ru/skalodrom_dlya_detey_v_moskve' },
+        { title: 'Студентам', text: 'Условия для студентов', url: 'https://bigwallsport.ru/student-skalolazanie' },
+        { title: 'Подарочный сертификат', text: 'Скалолазание в подарок', url: 'https://bigwallsport.ru/podarochnie-sertifikaty-na-skalodrom' }
+      ]
+    };
+  }
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>
